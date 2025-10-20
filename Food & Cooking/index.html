@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- GOOGLE ICONS -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <!-- FONTAWESOME ICONS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- LINK CSS -->
+    <link rel="stylesheet" href="CSS/styles.css">
+    <title> Portfolio | Homepage </title>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <a class="logo" href="#home"><img src="IMAGES/logo.png" alt="logo" height="70" width="200"></a>
+            
+            <div id="menu-bar" class="fas fa-bars"></div>
+
+            <nav class="navbar">
+                    <a href="#home">Home</a>
+                    <a href="#cooking">Cooking</a>    
+                    <a href="#menu">Menu</a>
+                    <a href="#about">About Us</a>
+                    <a href="#contact">Contact</a>
+            </nav>
+            <div class="setup">
+                <div class="searchbar">
+                    <input type="text" id="searchInput" placeholder="Search...">
+                    <button id="searchButton"><span class="material-symbols-outlined">search</span></button>
+                </div>
+                <button class="signin">Sign in</button>
+            </div>     
+    </header>
+
+    <!-- MAIN -->
+    <main>
+        <!-- Home -->
+        <section class="home" id="home" > 
+            <div class="content">
+                <h3>Enjoy Delicious Food made with love</h3>
+                <p> We believe in adding a dash of love to every dish. Explore our menu filled with familiar favorites and exciting new 
+                    flavors. Come join us in sharing the happiness of good food with your loved ones.</p>
+                <a href="#cooking" class="btn">Watch a video</a>
+            </div>
+
+            <div class="image">
+                <a href="#menu"><img src="IMAGES/rice.png" alt="food-icon"></a>
+            </div>
+        </section>
+
+        <!-- Cooking -->
+        <section class="cooking" id="cooking">
+            <h1 class="discover">Discover Our New Special<br> Cooking Recipes</h1>
+            <div class="wrapper">
+                <p> Welcome to our Cooking Section, where we celebrate the flavors of the TimplaExpress with a dash of love! Explore our 
+                    collection of Specialties Menu recipes, each handpicked to bring the taste of home to your kitchen and fill your 
+                    meals with the warmth of love.</p>
+            </div>
+            <div id="videoContainer">
+                <video id="video1" width="640" height="360" controls>
+                  <source src="IMAGES/video1.mp4" type="video/mp4">
+                </video>
+                <video id="video2" width="640" height="360" controls style="display: none;">
+                  <source src="IMAGES/video2.mp4" type="video/mp4">
+                </video>
+                <video id="video3" width="640" height="360" controls style="display: none;">
+                    <source src="IMAGES/video3.mp4" type="video/mp4">
+                  </video>
+            </div>
+            <div id="swapContainer">
+                <p>Click to switch...</p>
+                <button class="switch" onclick="swapVideos()"><span class="material-symbols-outlined">autorenew</span></button>
+            </div>
+        </section>
+
+        <!-- Menu -->
+        <section class="menu" id="menu">
+            <div id="specialties">
+                <h1 class="heading"> Our <span>Specialties Menu</span></h1>
+                
+                <div class="box-container">
+                    <div class="box">
+                        <div class="content">
+                            <img src="IMAGES/special1.webp" alt="" height="200">
+                            <h3>Chicken Adobo</h3>
+                            <p> Chicken Adobo is a customer favorite, featuring tender chicken marinated in a flavorful blend of vinegar, soy sauce, garlic, 
+                                and spices. Slow-cooked to perfection, this dish captures the essence of Filipino comfort food with its irresistible combination 
+                                of tanginess and richness. Served with steamed rice, it's a heartwarming meal that's sure to bring joy to your table.</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="content">
+                            <img src="IMAGES/special2.png" alt="" height="200">
+                            <h3>Carbonara</h3>
+                            <p> Carbonara is a timeless favorite, boasting creamy pasta tossed with crispy bacon, Parmesan cheese, and a hint of black pepper. 
+                                With each bite, you'll experience the comforting flavors of Italian cuisine and the creamy richness that makes Carbonara 
+                                irresistible. Whether enjoyed as a quick weeknight dinner or a cozy weekend indulgence, Carbonara never fails to satisfy cravings 
+                                and warm hearts with its simple yet comforting charm.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="meals">
+                <h1 class="heading"> Our <span>Meals Menu</span></h1>
+
+                <div class="box-container">
+                    <div class="box">
+                        <div class="content">
+                            <img src="IMAGES/dish1.jpg" alt="" height="200">
+                            <h3>Tasty Lumpia</h3>
+                            <p> Lumpia is a spring roll filled with a mixture of minced meat (usually pork or chicken), finely 
+                                chopped vegetables like carrots, cabbage, and sometimes bean sprouts. It's seasoned with soy sauce and 
+                                other spices, then wrapped in a thin crepe-like wrapper and fried until crispy. Tasty lumpia often includes 
+                                a sweet and tangy dipping sauce made from vinegar, soy sauce, garlic, and sugar.</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="content">
+                            <img src="IMAGES/dish2.jpg" alt="" height="200">
+                            <h3>Pancit Bihon</h3>
+                            <p> Pancit Bihon is a noodle dish made with thin rice noodles stir-fried with vegetables, 
+                                meat (often chicken, pork, or shrimp), and sometimes sliced sausage or liver. The dish is seasoned with soy sauce, 
+                                fish sauce, and citrus juice like calamansi or lemon. its delicious flavor and symbolism of long life.</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="content">
+                            <img src="IMAGES/dish3.jpg" alt="" height="200">
+                            <h3>Balbacua</h3>
+                            <p> Balbacua is a hearty stew made from slow-cooked beef or pork skin, tendons, and other cuts of meat. It's simmered for 
+                                hours until the meat is tender and infused with rich flavors from spices like star anise, garlic, and black pepper. 
+                                Balbacua is often served with rice and enjoyed with condiments like soy sauce, vinegar, and chili for added flavor.</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="content">
+                            <img src="IMAGES/dish4.jpg" alt="" height="200">
+                            <h3>Chicken Pochero</h3>
+                            <p> Pochero its hearty and flavorful broth. Chicken Pochero typically includes chicken pieces simmered with vegetables 
+                                such as cabbage, potatoes, carrots, and plantains (saba bananas), along with tomatoes, onions, and garlic. It's 
+                                seasoned with bay leaves, salt, and pepper, resulting in a comforting and satisfying dish often served with rice.</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="content">
+                            <img src="IMAGES/dish5.jpg" alt="" height="200">
+                            <h3>Linarang</h3>
+                            <p> Linarang is a stew made with fresh fish, cooked in a sour broth flavored with vinegar, ginger, tomatoes, and green chilies. 
+                                It's a tangy and savory dish with a hint of spiciness from the chilies, balanced by the acidity of the vinegar. Linarang 
+                                is typically served hot and enjoyed with rice.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="drinks">
+                <h1 class="heading"> Our <span>Drinks Menu</span></h1>
+
+                <div class="box-container">
+                    <div class="box">
+                        <div class="content">
+                            <img src="IMAGES/bevarage1.jpg" alt="" height="200">
+                            <h3>Chocalate Milkshake</h3>
+                            <p> Enjoy the Creamy richness of our classic chocolate milkshake. Made with smooth chocolate ice cream or milk, it's a delightful 
+                                treat that's perfect for indulging your sweet tooth.</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="content">
+                            <img src="IMAGES/bevarage2.jpg" alt="" height="200">
+                            <h3>Fruity Iced Tea</h3>
+                            <p> Quench your thirst with our refreshing fruity iced tea. Bursting with vibrant flavors, it's a perfect blend of assorted fruits 
+                                infused into chilled tea, served over ice for a revitalizing sip.</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="content">
+                            <img src="IMAGES/bevarage3.jpg" alt="" height="200">
+                            <h3>Mocha Iced Coffee</h3>
+                            <p> Wake up your taste buds with our mocha iced coffee. Combining bold espresso with creamy chocolate, it's a deliciously indulgent 
+                                drink served chilled over ice, perfect for any time of day.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </section>
+        
+        <!-- About -->
+        <section class="about" id="about">
+            <div class="image">
+                <a href="#"><img src="IMAGES/profile.png" alt="profile"></a>
+            </div>
+            <div class="content">
+                <h3>Who We Are?</h3>
+                <p> Our story is simple yet meaningful. We love food, and we love sharing that passion with you. It all began with a small kitchen, a dream, and a desire 
+                    to create something special. With every recipe we develop and every meal we serve, our goal is clear to bring joy and satisfaction to your 
+                    dining experience.</p>
+                <p> Our journey continues, fueled by your support and our shared love for good food. With each chapter, we're writing a new story, filled with creativity, 
+                    community, and culinary delights. So join us as we embark on this adventure together. Together, let's celebrate the simple joys of food and 
+                    friendship at [Your Company Name]. Welcome to our table, where every meal is a story waiting to be shared.</p>
+                    <a href="#" class="btn">Read More</a>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="contact" id="contact">
+            <div id="contact-container">
+                <div class="box-container">
+                    <div class="box">
+                        <div class="content">
+                            <h3>Share Your Thoughts</h3>
+                            <p> We'd love to hear from you! Share your thoughts, ideas, or any issues you've encountered on our food and cooking website. Your 
+                                feedback helps us serve you better. Fill out the form below and let's cook up something great together!</p>
+                        </div>
+                        <form action="#" class="form">
+                            <input type="email" class="form-input" placeholder="Enter your Email Here" required>
+                            <button type="submit" class="sec-btn primary-btn">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="footer">
+        <div class="footer-container container grid">
+            <div>
+                <a href="#" class="footer-logo">
+                    <img src="IMAGES/logo.png" alt="logo image" height="70" width="200">
+                </a>
+
+                <p class="footer-description">
+                    Explore delicious flavors with TimplaExpress.
+                    Enjoy the taste of happiness in every dish.
+                    Come join the food journey!
+                </p>
+            </div>
+
+            <div class="footer-content">
+                <div>
+                    <h3 class="footer-title">Main Menu</h3>
+
+                    <ul class="footer-links">
+                        <li><a href="#home" class="footer-link">Home</a></li>
+                        <li><a href="#about" class="footer-link">About</a></li>
+                        <li><a href="#menu" class="footer-link">Menu</a></li>
+                    </ul>
+                </div> 
+                <div>
+                    <h3 class="footer-title">Information</h3>
+
+                    <ul class="footer-links">
+                        <li><a href="#contact" class="footer-link">Contact</a></li>
+                        <li><a href="#cooking" class="footer-link">Videos</a></li>
+                    </ul>
+                </div> 
+                <div>
+                    <h3 class="footer-title">Address</h3>
+
+                    <ul class="footer-links">
+                        <li class="footer-info">
+                            Tagunol, All Season 3<br>
+                            Cogon Pardo Cebu City
+                        </li>
+                        <li class="footer-info">
+                            8AM - 12PM
+                        </li>
+                    </ul>
+                </div> 
+                <div>
+                    <h3 class="footer-title">Social Media</h3>
+
+                    <ul class="footer-social">
+                        <li><a href="https://web.facebook.com/neil.masion.3" target="_blank" class="social-link">
+                            <i class="fa-brands fa-square-facebook"></i>
+                        </a></li>
+                        <li><a href="https://www.instagram.com/x_sy.shon/" target="_blank" class="social-link">
+                            <i class="fa-brands fa-square-instagram"></i>
+                        </a></li>
+                        <li><a href="https://twitter.com/justine_colen" target="_blank" class="social-link">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a></li>
+                    </ul>
+                </div> 
+            </div>
+        </div>
+        <p class="copyrights">
+            &#169; Copyright Masion. All rights reserved.
+        </p>
+    </footer>
+    
+    <!-- MAIN JS -->
+    <script src="SCRIPTS/scripts.js"></script>
+</body>
+</html>
